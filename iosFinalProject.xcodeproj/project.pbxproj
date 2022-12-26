@@ -11,6 +11,11 @@
 		4BBDF7262959831000D2FF02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBDF7252959831000D2FF02 /* ContentView.swift */; };
 		4BBDF7282959831800D2FF02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BBDF7272959831800D2FF02 /* Assets.xcassets */; };
 		4BBDF72B2959831800D2FF02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4BBDF72A2959831800D2FF02 /* Preview Assets.xcassets */; };
+		4BBDF7342959868000D2FF02 /* homePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBDF7332959868000D2FF02 /* homePage.swift */; };
+		4BBDF73729599B2700D2FF02 /* tetrioStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBDF73629599B2600D2FF02 /* tetrioStruct.swift */; };
+		4BBDF73A2959CC1400D2FF02 /* tetrioPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBDF7392959CC1400D2FF02 /* tetrioPage.swift */; };
+		4BBDF73D2959CEB500D2FF02 /* clashPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBDF73C2959CEB500D2FF02 /* clashPage.swift */; };
+		4BBDF7442959D02200D2FF02 /* tetrioFindUserPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBDF7432959D02200D2FF02 /* tetrioFindUserPage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +25,11 @@
 		4BBDF7272959831800D2FF02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4BBDF72A2959831800D2FF02 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4BBDF72C2959831800D2FF02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4BBDF7332959868000D2FF02 /* homePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homePage.swift; sourceTree = "<group>"; };
+		4BBDF73629599B2600D2FF02 /* tetrioStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tetrioStruct.swift; sourceTree = "<group>"; };
+		4BBDF7392959CC1400D2FF02 /* tetrioPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tetrioPage.swift; sourceTree = "<group>"; };
+		4BBDF73C2959CEB500D2FF02 /* clashPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clashPage.swift; sourceTree = "<group>"; };
+		4BBDF7432959D02200D2FF02 /* tetrioFindUserPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tetrioFindUserPage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +64,11 @@
 			children = (
 				4BBDF7232959831000D2FF02 /* iosFinalProjectApp.swift */,
 				4BBDF7252959831000D2FF02 /* ContentView.swift */,
+				4BBDF73C2959CEB500D2FF02 /* clashPage.swift */,
+				4BBDF7332959868000D2FF02 /* homePage.swift */,
+				4BBDF7392959CC1400D2FF02 /* tetrioPage.swift */,
+				4BBDF7432959D02200D2FF02 /* tetrioFindUserPage.swift */,
+				4BBDF73629599B2600D2FF02 /* tetrioStruct.swift */,
 				4BBDF7272959831800D2FF02 /* Assets.xcassets */,
 				4BBDF72C2959831800D2FF02 /* Info.plist */,
 				4BBDF7292959831800D2FF02 /* Preview Content */,
@@ -138,7 +153,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BBDF7342959868000D2FF02 /* homePage.swift in Sources */,
+				4BBDF73729599B2700D2FF02 /* tetrioStruct.swift in Sources */,
+				4BBDF73A2959CC1400D2FF02 /* tetrioPage.swift in Sources */,
+				4BBDF7442959D02200D2FF02 /* tetrioFindUserPage.swift in Sources */,
 				4BBDF7262959831000D2FF02 /* ContentView.swift in Sources */,
+				4BBDF73D2959CEB500D2FF02 /* clashPage.swift in Sources */,
 				4BBDF7242959831000D2FF02 /* iosFinalProjectApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
