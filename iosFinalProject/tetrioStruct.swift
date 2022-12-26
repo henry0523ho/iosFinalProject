@@ -11,5 +11,13 @@ struct UserStruct: Codable{
     let data:UserData
 }
 struct UserData: Codable{
-    let name:String
+    let user:UserDataUser
+}
+
+struct UserDataUser: Codable{
+    let username:String
+    let xp:Int
+//    let rank:String
+//    let apm:Double
+//    let pps:Double
 }
