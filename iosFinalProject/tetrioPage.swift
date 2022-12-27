@@ -14,9 +14,10 @@ struct tetrioPage: View {
                 NavigationLink(
                     destination: tetrioFindUserPage(),
                     label: {
-                        Text("Find user")
+                        Text("Tetr.io")
                     })
-            }.navigationTitle("Tetr.io")
+                NavigationLink(destination: jstrisView(),label:{Text("Jstris")})
+            }.navigationTitle("俄羅斯方塊")
             
         }
     }

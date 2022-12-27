@@ -12,17 +12,31 @@ struct chessLeaderBoard: View {
     
     var body: some View {
         List{
-//            Button(action: {
-//                fetchData()
-//            }, label: {
-//                Text("Button")
-//            })
+            HStack{
+                Text("玩家名稱").frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                Divider()
+                Text("勝場數").frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                Divider()
+                Text("平局").frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                Divider()
+                Text("敗場數").frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            }
             ForEach(self.myData.daily){
-                item in Text("\(item.username)" as String)
+//                item in Text("\(item.username)" as String)
+                item in chessUserView(userData:item)
             }
         }.onAppear(perform: {
             fetchData()
         })
+//        let col=Array(repeating: GridItem(), count: 4)
+//        ScrollView{
+//            LazyVGrid(columns: col, content: {
+//                /*@START_MENU_TOKEN@*/Text("Placeholder")/*@END_MENU_TOKEN@*/
+//                /*@START_MENU_TOKEN@*/Text("Placeholder")/*@END_MENU_TOKEN@*/
+//            })
+//        }.onAppear(perform: {
+//            fetchData()
+//        })
     }
     func fetchData(){
         let query = "https://api.chess.com/pub/leaderboards"
@@ -40,6 +54,22 @@ struct chessLeaderBoard: View {
                         }.resume()
                     }
                 }
+    }
+}
+
+struct chessUserView: View{
+    var userData:ChessItem
+    var body: some View{
+        HStack{
+            Group{
+                Text("\(userData.username)")
+                Text("\(userData.win_count)")
+                Text("\(userData.draw_count)")
+                Text("\(userData.loss_count)")
+            }.lineLimit(1)
+            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            
+        }
     }
 }
 

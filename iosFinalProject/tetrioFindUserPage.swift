@@ -13,7 +13,7 @@ struct tetrioFindUserPage: View {
     @State var userData=UserStruct(data: UserData(user: UserDataUser(username: "didnt get data", xp: 0) ))
     
     var body: some View {
-        NavigationView{
+//        NavigationView{
             VStack{
                 Form{
                     Text("Find a user by name")
@@ -27,7 +27,7 @@ struct tetrioFindUserPage: View {
                     }
                 }
             }.navigationTitle("find user by name")
-        }
+//        }
         
     }
     func fetchData(){
