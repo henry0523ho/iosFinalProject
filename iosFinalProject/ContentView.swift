@@ -12,6 +12,7 @@ struct ContentView: View {
         TabView{
             tetrioPage().tabItem { Label("Tetrio", systemImage: "star") }
             clashPage().tabItem { Label("Clash of Clane", systemImage: "star" )}
+            chessPage().tabItem { Label("Chess.com", systemImage: "star") }
         }
         
     }

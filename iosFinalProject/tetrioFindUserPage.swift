@@ -46,9 +46,9 @@ struct tetrioFindUserPage: View {
                             }
                             
                             
-                            if let data=data {
-                                getData=String(data:data, encoding: .utf8)!
-                            }
+//                            if let data=data {
+//                                getData=String(data:data, encoding: .utf8)!
+//                            }
                             
                         }.resume()
                     }

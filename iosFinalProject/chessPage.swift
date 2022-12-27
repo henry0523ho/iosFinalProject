@@ -12,9 +12,9 @@ struct chessPage: View {
         NavigationView{
             List{
                 NavigationLink(
-                    destination: tetrioFindUserPage(),
+                    destination: chessLeaderBoard(),
                     label: {
-                        Text("List")
+                        Text("LeaderBoard")
                     })
             }.navigationTitle("Chess")
             
@@ -24,6 +24,8 @@ struct chessPage: View {
 
 struct chessPage_Previews: PreviewProvider {
     static var previews: some View {
-        chessPage()
+        NavigationView{
+            chessPage()
+        }
     }
 }

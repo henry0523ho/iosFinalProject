@@ -17,6 +17,8 @@
 		4BBDF73D2959CEB500D2FF02 /* clashPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBDF73C2959CEB500D2FF02 /* clashPage.swift */; };
 		4BBDF7442959D02200D2FF02 /* tetrioFindUserPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBDF7432959D02200D2FF02 /* tetrioFindUserPage.swift */; };
 		4BBDF748295ACACA00D2FF02 /* chessPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBDF747295ACACA00D2FF02 /* chessPage.swift */; };
+		4BBDF74B295ACF1F00D2FF02 /* chessStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBDF74A295ACF1F00D2FF02 /* chessStruct.swift */; };
+		4BBDF74E295AD05A00D2FF02 /* chessLeaderBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BBDF74D295AD05A00D2FF02 /* chessLeaderBoard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		4BBDF73C2959CEB500D2FF02 /* clashPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = clashPage.swift; sourceTree = "<group>"; };
 		4BBDF7432959D02200D2FF02 /* tetrioFindUserPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tetrioFindUserPage.swift; sourceTree = "<group>"; };
 		4BBDF747295ACACA00D2FF02 /* chessPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chessPage.swift; sourceTree = "<group>"; };
+		4BBDF74A295ACF1F00D2FF02 /* chessStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chessStruct.swift; sourceTree = "<group>"; };
+		4BBDF74D295AD05A00D2FF02 /* chessLeaderBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chessLeaderBoard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 				4BBDF7392959CC1400D2FF02 /* tetrioPage.swift */,
 				4BBDF7432959D02200D2FF02 /* tetrioFindUserPage.swift */,
 				4BBDF747295ACACA00D2FF02 /* chessPage.swift */,
+				4BBDF74D295AD05A00D2FF02 /* chessLeaderBoard.swift */,
+				4BBDF74A295ACF1F00D2FF02 /* chessStruct.swift */,
 				4BBDF73629599B2600D2FF02 /* tetrioStruct.swift */,
 				4BBDF7272959831800D2FF02 /* Assets.xcassets */,
 				4BBDF72C2959831800D2FF02 /* Info.plist */,
@@ -159,8 +165,10 @@
 				4BBDF7342959868000D2FF02 /* homePage.swift in Sources */,
 				4BBDF73729599B2700D2FF02 /* tetrioStruct.swift in Sources */,
 				4BBDF73A2959CC1400D2FF02 /* tetrioPage.swift in Sources */,
+				4BBDF74B295ACF1F00D2FF02 /* chessStruct.swift in Sources */,
 				4BBDF7442959D02200D2FF02 /* tetrioFindUserPage.swift in Sources */,
 				4BBDF7262959831000D2FF02 /* ContentView.swift in Sources */,
+				4BBDF74E295AD05A00D2FF02 /* chessLeaderBoard.swift in Sources */,
 				4BBDF748295ACACA00D2FF02 /* chessPage.swift in Sources */,
 				4BBDF73D2959CEB500D2FF02 /* clashPage.swift in Sources */,
 				4BBDF7242959831000D2FF02 /* iosFinalProjectApp.swift in Sources */,
