@@ -10,19 +10,21 @@ import SwiftUI
 struct tetrioFindUserPage: View {
     @State var userName:String=""
     @State var getData:String=""
-    @State var userData=UserStruct(data: UserData(user: UserDataUser(username: "didnt get data", xp: 0) ))
+    @State var userData=UserStruct(data: UserData(user: UserDataUser(username: "didnt get data", xp: 0,league: userLeague(gamesplayed: 0, gameswon: 0, rating: 0, glicko: 0, bestrank: "z", apm: 0, pps: 0)) ))
     
     var body: some View {
 //        NavigationView{
             VStack{
                 Form{
-                    Text("Find a user by name")
-                    TextField("user name", text: $userName).textCase(.lowercase).autocapitalization(.none)
-                    Button(action: {fetchData()}, label: {
-                        Text("search")
-                    })
+                    HStack{
+                        Text("user name:")
+                        TextField("user name", text: $userName).textCase(.lowercase).autocapitalization(.none)
+                        Button(action: {fetchData()}, label: {
+                            Text("search")
+                        })
+                    }
+                    
                     List{
-                        Text("aaa")
                         tetrioUserView(test:$getData, userData: $userData)
                     }
                 }
@@ -62,7 +64,14 @@ struct tetrioUserView: View {
     var body: some View{
         List{
             Text("user name:\(userData.data.user.username)")
-            Text("user xp:\(userData.data.user.xp)")
+            Text("xp:\(userData.data.user.xp)")
+            Text("打過幾場牌位:\(userData.data.user.league.gamesplayed)")
+            Text("贏過幾場:\(userData.data.user.league.gameswon)")
+            Text("rating:\(userData.data.user.league.rating)")
+            Text("技術評分:\(userData.data.user.league.glicko)")
+            Text("最高等級:\(userData.data.user.league.bestrank)")
+            Text("apm:\(userData.data.user.league.apm)")
+            Text("pps:\(userData.data.user.league.pps)")
         }
     }
 }

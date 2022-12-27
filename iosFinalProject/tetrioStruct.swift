@@ -17,7 +17,15 @@ struct UserData: Codable{
 struct UserDataUser: Codable{
     let username:String
     let xp:Int
-//    let rank:String
-//    let apm:Double
-//    let pps:Double
+    let league:userLeague
+}
+
+struct userLeague: Codable{
+    let gamesplayed:Int
+    let gameswon:Int
+    let rating:Double
+    let glicko:Double
+    let bestrank:String
+    let apm:Double
+    let pps:Double
 }
