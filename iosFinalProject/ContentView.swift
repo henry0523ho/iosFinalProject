@@ -11,9 +11,12 @@ struct ContentView: View {
     @State var tag:Int=1
     var body: some View {
         TabView(selection:$tag){
-            tetrioPage().tabItem { Label("俄羅斯方塊", systemImage: "star") }.tag(1)
+            tetrioPage().tabItem {
+                Label("俄羅斯方塊", systemImage: "gamecontroller.fill")
+                
+            }.tag(1)
             //clashPage().tabItem { Label("Clash of Clane", systemImage: "star" )}
-            chessPage().tabItem { Label("Chess.com", systemImage: "star") }.tag(2)
+            chessPage().tabItem { Label("Chess", systemImage: "person.fill") }.tag(2)
         }
         
     }

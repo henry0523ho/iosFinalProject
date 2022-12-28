@@ -28,7 +28,7 @@ struct tetrioFindUserPage: View {
                         tetrioUserView(test:$getData, userData: $userData)
                     }
                 }
-            }.navigationTitle("find user by name")
+            }.navigationTitle("Tetr.io玩家搜尋")
 //        }
         
     }
@@ -63,15 +63,35 @@ struct tetrioUserView: View {
     @Binding var userData:UserStruct
     var body: some View{
         List{
-            Text("user name:\(userData.data.user.username)")
-            Text("xp:\(userData.data.user.xp)")
-            Text("打過幾場牌位:\(userData.data.user.league.gamesplayed)")
-            Text("贏過幾場:\(userData.data.user.league.gameswon)")
-            Text("rating:\(userData.data.user.league.rating)")
-            Text("技術評分:\(userData.data.user.league.glicko)")
+            HStack{
+                Text("項目").frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                Divider()
+                Text("資料").frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            }
+            twoColView(title: "使用者名稱:", content: "\(userData.data.user.username)")
+            twoColView(title: "XP:", content: "\(userData.data.user.xp)")
+            twoColView(title: "排位場數:", content: "\(userData.data.user.league.gamesplayed)")
+            twoColView(title: "排位勝場:", content: "\(userData.data.user.league.gameswon)")
+//            twoColView(title: "排位積分:", content: "\(userData.data.user.league.rating)")
+            ProgressView("排位積分:\(userData.data.user.league.rating,specifier: "%.2f")", value: (userData.data.user.league.rating/25000))
+            twoColView(title: "技術評分:", content: "\(userData.data.user.league.glicko)")
+            twoColView(title: "APM:", content: "\(userData.data.user.league.apm)")
+            twoColView(title: "PPS:", content: "\(userData.data.user.league.pps)")
             Text("最高等級:\(userData.data.user.league.bestrank)")
-            Text("apm:\(userData.data.user.league.apm)")
-            Text("pps:\(userData.data.user.league.pps)")
+        }
+    }
+}
+
+struct twoColView: View{
+    var title:String
+    var content:String
+    var body: some View{
+        HStack{
+            Group{
+                Text("\(title)")
+                Text("\(content)")
+            }.lineLimit(1)
+            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
         }
     }
 }
