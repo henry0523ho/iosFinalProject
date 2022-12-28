@@ -11,7 +11,7 @@ struct tetrioFindUserPage: View {
     @State var userName:String=""
     @State var getData:String=""
     @State var userData=UserStruct(data: UserData(user: UserDataUser(username: "didnt get data", xp: 0,league: userLeague(gamesplayed: 0, gameswon: 0, rating: 0, glicko: 0, bestrank: "z", apm: 0, pps: 0)) ))
-    
+    @State var showAlert=false
     var body: some View {
 //        NavigationView{
             VStack{
@@ -21,6 +21,8 @@ struct tetrioFindUserPage: View {
                         TextField("user name", text: $userName).textCase(.lowercase).autocapitalization(.none)
                         Button(action: {fetchData()}, label: {
                             Text("search")
+                        }).alert(isPresented: $showAlert, content: {
+                            return Alert(title: Text("找不到玩家"))
                         })
                     }
                     
@@ -44,6 +46,7 @@ struct tetrioFindUserPage: View {
                                 self.userData=res
                                 print(res.data.user.username)
                             } else {
+                                showAlert=true
                                 print("error")
                             }
                             

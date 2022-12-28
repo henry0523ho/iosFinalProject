@@ -12,7 +12,7 @@ struct jstrisView: View {
     @State var username:String=""
     var body: some View {
         VStack{
-            Text("username")
+            Text("Jstris玩家搜尋")
             TextField("username", text: $username).textCase(.lowercase).autocapitalization(.none)
                 .padding(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             WebView(username: username).frame(height: .infinity)

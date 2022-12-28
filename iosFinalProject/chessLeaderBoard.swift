@@ -9,8 +9,10 @@ import SwiftUI
 
 struct chessLeaderBoard: View {
     @State var myData=ChessStruct(daily: [ChessItem]())
-    
+    //var updateTimer:Timer?
     var body: some View {
+        VStack{
+        Text("排行榜")
         List{
             HStack{
                 Text("玩家名稱").frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
@@ -26,7 +28,10 @@ struct chessLeaderBoard: View {
                 item in chessUserView(userData:item)
             }
         }.onAppear(perform: {
+            //updateTimer=Timer.scheduledTimer(withTimeInterval: 10, repeats: true, block: fetchData)
             fetchData()
+        }).onDisappear(perform: {
+            
         })
 //        let col=Array(repeating: GridItem(), count: 4)
 //        ScrollView{
@@ -37,6 +42,7 @@ struct chessLeaderBoard: View {
 //        }.onAppear(perform: {
 //            fetchData()
 //        })
+        }
     }
     func fetchData(){
         let query = "https://api.chess.com/pub/leaderboards"
