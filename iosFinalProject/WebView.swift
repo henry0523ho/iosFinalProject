@@ -12,15 +12,8 @@ struct WebView: UIViewRepresentable{
     var username:String
     func makeUIView(context: Context) -> WKWebView {
         let webView = WKWebView()
-//        var query="https://jstris.jezevec10.com/u/"
-//        query.append(username)
-//        if let url = URL(string: query) {
-//            let request = URLRequest(url: url)
-//            webView.load(request)
-//        }
         return webView
     }
-    
     func updateUIView(_ uiView: WKWebView, context: Context) {
         var query="https://jstris.jezevec10.com/u/"
         query.append(username)
@@ -29,10 +22,7 @@ struct WebView: UIViewRepresentable{
             uiView.load(request)
         }
     }
-    
     typealias UIViewType = WKWebView
-    
-    
 }
 
 struct WebView_Previews: PreviewProvider {
